@@ -51,6 +51,16 @@ class Ball
 			pos = position;
 		}
 
+		sf::Vector2f getPos()
+		{
+			return pos;
+		}
+
+		float getRadius()
+		{
+			return radius;
+		}
+
 		void updateMov(float dt)
 		{
 			//update speed from accel

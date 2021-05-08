@@ -7,7 +7,7 @@ float norm(sf::Vector2f vect)
 
 float dist(sf::Vector2f vect1, sf::Vector2f vect2)
 {
-	sf::Vector2f distance(vect2.x - vect1.x, vect2.y - vect1.y);
+	sf::Vector2f distance(abs(vect2.x - vect1.x), abs(vect2.y - vect1.y));
 	return norm(distance);
 }
 

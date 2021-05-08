@@ -20,14 +20,14 @@ int main()
 	sf::Vector2f speed = {scale * 5.0f, scale * 0.0f};
 	sf::Vector2f pos = {50.0f, 100.0f};
 
-	int number_balls = 10;
+	int number_balls = 2;
 	Ball balls[number_balls];
 
 	for (int i = 0; i < number_balls; i++) {
 		balls[i] = Ball(ball_size, mass);
 		balls[i].setAccel(accel);
 		balls[i].setSpeed(speed);
-		pos.x += 2 * ball_size * i + 50;
+		pos.x += 2 * ball_size * i + 100;
 		balls[i].moveTo(pos);
 	}
 
@@ -68,6 +68,20 @@ int main()
 			balls[i].updateMov(dt);
 			balls[i].checkWallCol(xlimit, ylimit, loss);
 			balls[i].move();
+		}
+
+		// resolving colisions between balls
+		int j = 0;
+		for (j = 0; j < number_balls; j++) {
+			for (int k = j+1; k < number_balls; k++) {
+				sf::Vector2f ball1 = balls[j].getPos();
+				sf::Vector2f ball2 = balls[k].getPos();
+				float r1 = balls[j].getRadius();
+				float r2 = balls[k].getRadius();
+				if (dist(ball1, ball2) <= r1 + r2){
+
+				}
+			}
 		}
 
 		window.clear();
