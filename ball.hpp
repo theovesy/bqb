@@ -61,6 +61,16 @@ class Ball
 			return radius;
 		}
 
+		sf::Vector2f getSpeed()
+		{
+			return speed;
+		}
+
+		float getMass()
+		{
+			return mass;
+		}
+
 		void updateMov(float dt)
 		{
 			//update speed from accel

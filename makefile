@@ -1,6 +1,6 @@
 all: bqb
 
-bqb: bqb.cpp ball.hpp
+bqb: bqb.cpp ball.hpp vectcalc.hpp
 	g++ bqb.cpp -o bqb -lsfml-graphics -lsfml-window -lsfml-system
 
 main: main.cpp
