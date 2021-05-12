@@ -1,9 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cmath>
-#include "ball.hpp"
-#include "vectcalc.hpp"
-#include "utils.hpp"
+#include "src/ball.hpp"
+#include "src/vectcalc.hpp"
+#include "src/utils.hpp"
 using namespace std;
 
 int main()
